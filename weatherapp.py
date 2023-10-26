@@ -1,5 +1,5 @@
 import tkinter as tk
-import requests
+import requests as rq
 from PIL import Image, ImageTk
 
 def get_weather(city):
@@ -8,11 +8,11 @@ def get_weather(city):
     params = {'APPID': weather_key, 'q': city, 'units': 'imperial'}
 
     try:
-        response = requests.get(url, params)
+        response = rq.get(url, params)
         response.raise_for_status()
         weather = response.json()
         display_weather(weather)
-    except requests.exceptions.RequestException as e:
+    except rq.exceptions.RequestException as e:
         result.config(text="Error retrieving weather data.")
 
 def display_weather(weather):
