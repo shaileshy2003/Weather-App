@@ -20,6 +20,7 @@ def get_weather(city):
 def display_weather(weather):
     try:
         city_name = weather['name']
+        
         description = weather['weather'][0]['description']
         temperature = weather['main']['temp']
 
@@ -66,4 +67,4 @@ frame_two.place(x=80, y=130, width=450, height=300)
 result = tk.Label(frame_two, font=('times new roman', 16), bg='white', justify='left')
 result.place(relwidth=1, relheight=1)
 
-root.mainloop()
+root.mainloop()  # weather app is very cool dude 
