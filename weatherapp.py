@@ -1,7 +1,9 @@
+# Import Files
 import tkinter as tk
 import requests as rq
 from PIL import Image, ImageTk
 
+# Function
 def get_weather(city):
     weather_key = 'e496c4f1f7e7f7300f08630a566dc4e5'
     url = 'https://api.openweathermap.org/data/2.5/weather'
